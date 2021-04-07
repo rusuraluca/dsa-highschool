@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int n, k, a[25][25]; 
+int n, k, a[25][25];
 
 int putere(int n) {
     int d, p, minp=999999999, minn=0;
@@ -16,20 +16,12 @@ int putere(int n) {
         if(p < minp && p!=0){
             minp = p;
             minn = d;
-        } else if(p == minp && d < minn){
-            minp = p;
-            minn = d;    
         }
-        
         ++d;
-        
-        if(n > 1 && d*d>n){
-            d=n;
-        }
     }
-    
+
     return minn;
-}    
+}
 
 int main() {
     cin >> n;
